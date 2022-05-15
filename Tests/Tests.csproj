@@ -6,4 +6,11 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\UseCases\UseCases.csproj" />
+    <ProjectReference Include="..\Domain\Domain.csproj" />
+    <ProjectReference Include="..\Infrastructure\Communication\Communication.csproj" />
+    <ProjectReference Include="..\Infrastructure\Repositories\Repositories.csproj" />
+  </ItemGroup>
+
 </Project>
