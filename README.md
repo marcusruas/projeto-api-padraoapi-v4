@@ -36,7 +36,7 @@ Camada com os handlers da aplicação. Ela utiliza os objetos e serviços das ou
 
 Camada com as regras de negócio da aplicação.
 
-## Infra
+## Infrastructure
 
 Camada responsável pela interação com aplicações externas a APIS
 
