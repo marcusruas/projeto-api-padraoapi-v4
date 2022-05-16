@@ -19,8 +19,8 @@ Até a data da implementação desta documentação (15/02/2022), os pacotes ain
 Para começar a desenvolver neste Scaffold, é necessário somente algumas coisas:
 
 - Alterar o nome da solution principal (ScaffoldApi.sln) para o nome da futura api;
-- Alterar a variável NOME_API na classe Api.Configuration.ApiConfiguration da camada de api para o nome da api desejada, bem como o nome do documento na invocação do serviço;
-- Alterar a variável TABELA_LOGS na classe Api.Configuration.ApiConfiguration da camada de api para o nome da tabela desejada.
+- Alterar a variável NOME_API na classe Api.Program da camada de api para o nome da api desejada, bem como o nome do documento na invocação do serviço;
+- Alterar a variável TABELA_LOGS na classe Api.Program da camada de api para o nome da tabela desejada.
 
 ## Um pouco sobre a arquitetura da aplicação
 
