@@ -1,7 +1,6 @@
 namespace Repositories.Area.Repository
 {
-    public interface IAreaRepository
+    public class AreaRepository : IAreaRepository
     {
-         
     }
 }

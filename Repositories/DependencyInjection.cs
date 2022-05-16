@@ -1,7 +1,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Repositories.Area.Repository;
 
-namespace Infrastructure.Repositories
+namespace Repositories
 {
     public static class DependencyInjection
     {

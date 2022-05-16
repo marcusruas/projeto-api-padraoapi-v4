@@ -1,5 +1,5 @@
-using static Infrastructure.Repositories.DependencyInjection;
-using static Infrastructure.Communication.DependencyInjection;
+using static Repositories.DependencyInjection;
+using static Communication.DependencyInjection;
 using static UseCases.DependencyInjection;
 using static MandradeFrameworks.Logs.Configuration.LogsConfiguration;
 using MandradeFrameworks.Mensagens.Configuration;
@@ -52,7 +52,7 @@ var configuracoesLogs = new SQLLogsConfiguration(connectionStringLogs, TABELA_LO
 
 builder.Services.AdicionarMensageria();
 builder.Services.AdicionarAutenticacao();
-AdicionarLogsSQL(configuracoesLogs);
+// AdicionarLogsSQL(configuracoesLogs);
 
 builder.Services.AddUseCases();
 builder.Services.AddCommunication();
