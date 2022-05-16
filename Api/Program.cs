@@ -1,19 +1,17 @@
 using static Repositories.DependencyInjection;
 using static Communication.DependencyInjection;
 using static UseCases.DependencyInjection;
-using static MandradeFrameworks.Logs.Configuration.LogsConfiguration;
+using static MandradeFrameworks.Retornos.Configuration.RetornosConfiguration;
 using MandradeFrameworks.Mensagens.Configuration;
 using MandradeFrameworks.Autenticacao.Configuration;
-using MandradeFrameworks.Logs.Models;
 using Microsoft.OpenApi.Models;
 
 const string NOME_API = "Scaffold API";
 const string VERSAO_API = "v1";
-const string TABELA_LOGS = "Logs_Template";
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllers();
+builder.Services.AddControllers(config => config.AdicionarConfiguracoes());
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(cnf =>
     {
@@ -47,12 +45,8 @@ builder.Services.AddSwaggerGen(cnf =>
     }
 );
 
-string connectionStringLogs = builder.Configuration.GetConnectionString("Logs");
-var configuracoesLogs = new SQLLogsConfiguration(connectionStringLogs, TABELA_LOGS);
-
 builder.Services.AdicionarMensageria();
 builder.Services.AdicionarAutenticacao();
-// AdicionarLogsSQL(configuracoesLogs);
 
 builder.Services.AddUseCases();
 builder.Services.AddCommunication();
